@@ -1,11 +1,15 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.scss";
+import LoginorSignup from "./pages/LoginorSignup/LoginorSignup";
 
 function App() {
   return (
-    <React.Fragment>
-      Hello World
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginorSignup />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
