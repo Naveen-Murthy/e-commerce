@@ -1,9 +1,11 @@
+@import '../../stylesheets/common/main';
+
 .form_block {
     background: #fff;
     min-height: 480px;
     margin-top: 30px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    color: #bbbbbb;
+    color: $secondaryColor;
     padding: 30px 0 60px;
     transition: all 0.9s cubic-bezier(1, -0.375, 0.285, 0.995);
     position: absolute;
@@ -35,18 +37,18 @@ form .form-group {
 }
 
 form .form-group.hasError input {
-    border-color: #f95959 !important;
+    border-color: $errorColor !important;
 }
 
 form .form-group.hasError label {
-    color: #f95959 !important;
+    color: $errorColor !important;
 }
 
 form label {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+    font-family: $subFont;
     transform: translateY(40px);
     transition: all 0.4s;
     cursor: text;
@@ -58,11 +60,6 @@ form label.active {
     font-size: 10px;
 }
 
-form label.fontSwitch {
-    font-family: "Raleway", sans-serif !important;
-    font-weight: 600;
-}
-
 form input:not([type="submit"]) {
     background: none;
     outline: none;
@@ -71,28 +68,24 @@ form input:not([type="submit"]) {
     padding: 10px 0;
     width: 100%;
     border-bottom: 1px solid #eee;
-    color: #444;
+    color: $inputColor;
     font-size: 15px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $subFont;
     z-index: 1;
 }
 
 form input:not([type="submit"]).hasError {
-    border-color: #f95959;
+    border-color: $errorColor;
 }
 
 form span.error {
-    color: #f95959;
-    font-family: "Montserrat", sans-serif;
+    color: $errorColor;
+    font-family: $subFont;
     font-size: 12px;
     position: absolute;
     bottom: -20px;
     right: 0;
     display: none;
-}
-
-form input[type="password"] {
-    color: #f95959;
 }
 
 form .CTA {
@@ -103,25 +96,24 @@ form .CTA {
     font-size: 12px;
     text-transform: uppercase;
     padding: 5px 30px;
-    background: #f95959;
-    color: #fff;
+    background: $primaryBtnColor;
+    color: $primaryBtnText;
     border-radius: 30px;
     margin-right: 20px;
     border: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: $subFont;
 }
 
 .switch {
     font-size: 13px;
     font-weight: 400;
-    font-family: "Montserrat", sans-serif;
-    color: #bbbbbb;
-    text-decoration: underline;
+    font-family: $subFont;
+    color: $linkColor;
     transition: all 0.3s;
     display: inline-block;
     cursor: pointer;
 }
 
 .switch:hover {
-    color: #f95959;
+    color: $linkHoverColor;
 }
