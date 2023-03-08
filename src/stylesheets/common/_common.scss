@@ -4,16 +4,26 @@ img {
     height: 100%;
 }
 
-input[type="text"] {
-    font-family: $fontFamily;
-    font-size: $fs + 4;
+input:not([type="submit"]) {
+    background: none;
+    outline: none;
+    border: none;
+    display: block;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    color: $inputColor;
+    font-size: $fs;
+    font-family: $subFont;
+    z-index: 1;
 
     @include layout(769) {
-        font-size: $fs + 2;
+        font-size: $fs + - 2;
     }
 
     @include layout(426) {
-        font-size: $fs;
+        font-size: $fs + - 4;
     }
 }
 
@@ -33,4 +43,16 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+.submit_button {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    background: $primaryBtnColor;
+    color: $primaryBtnText;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    font-family: $subFont;
 }

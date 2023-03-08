@@ -31,77 +31,58 @@ form {
     transform: translate(-50%, -50%);
 }
 
-form .form-group {
-    margin-bottom: 5px;
+.form-group {
+    margin-top: 32px;
     position: relative;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .error {
+        color: $errorColor;
+        font-family: $subFont;
+        font-size: 12px;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        display: none;
+    }
+
+    &.hasError {
+        input {
+            border-color: $errorColor !important;
+        }
+
+        label {
+            color: $errorColor !important;
+        }
+
+        .error {
+            display: block;
+        }
+    }
 }
 
-form .form-group.hasError input {
-    border-color: $errorColor !important;
-}
-
-form .form-group.hasError label {
-    color: $errorColor !important;
-}
-
-form label {
+label {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
     font-family: $subFont;
-    transform: translateY(40px);
+    transform: translateY(2px);
     transition: all 0.4s;
     cursor: text;
     z-index: -1;
-}
-
-form label.active {
-    transform: translateY(10px);
-    font-size: 10px;
-}
-
-form input:not([type="submit"]) {
-    background: none;
-    outline: none;
-    border: none;
-    display: block;
-    padding: 10px 0;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    color: $inputColor;
-    font-size: 15px;
-    font-family: $subFont;
-    z-index: 1;
-}
-
-form input:not([type="submit"]).hasError {
-    border-color: $errorColor;
-}
-
-form span.error {
-    color: $errorColor;
-    font-family: $subFont;
-    font-size: 12px;
     position: absolute;
-    bottom: -20px;
-    right: 0;
-    display: none;
+
+    &.active {
+        transform: translateY(-14px);
+        font-size: 10px;
+    }
 }
 
-form .CTA {
+.submit_block {
     margin-top: 30px;
-}
-
-.submit_button {
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 5px 30px;
-    background: $primaryBtnColor;
-    color: $primaryBtnText;
-    border-radius: 30px;
-    margin-right: 20px;
-    border: none;
-    font-family: $subFont;
 }
 
 .switch {
