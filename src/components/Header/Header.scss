@@ -1,0 +1,13 @@
+@import '../../stylesheets/variableStyles';
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 18px;
+    background: $headerBg;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./common.scss";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   handleClick: any;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 function Login({ handleClick, status }: Props) {
+  const history = useNavigate();
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -29,6 +31,7 @@ function Login({ handleClick, status }: Props) {
     }
     if (validate()) {
       console.log({ ...inputs });
+      history("/");
     }
   };
 
