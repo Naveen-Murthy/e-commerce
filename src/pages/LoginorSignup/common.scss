@@ -41,7 +41,7 @@ form {
 
     .error {
         color: $errorColor;
-        font-family: $subFont;
+        font-family: $fontFamily;
         font-size: 12px;
         position: absolute;
         bottom: -20px;
@@ -68,7 +68,7 @@ label {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: $subFont;
+    font-family: $fontFamily;
     transform: translateY(2px);
     transition: all 0.4s;
     cursor: text;
@@ -88,7 +88,7 @@ label {
 .switch {
     font-size: 13px;
     font-weight: 400;
-    font-family: $subFont;
+    font-family: $fontFamily;
     color: $linkColor;
     transition: all 0.3s;
     display: inline-block;

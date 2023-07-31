@@ -15,7 +15,7 @@ input:not([type="submit"]) {
     border-bottom: 1px solid #eee;
     color: $inputColor;
     font-size: $fs;
-    font-family: $subFont;
+    font-family: $fontFamily;
     z-index: 1;
 
     @include layout(769) {
@@ -54,15 +54,20 @@ input[type="number"] {
     border-radius: 30px;
     margin-right: 20px;
     border: none;
-    font-family: $subFont;
+    font-family: $fontFamily;
 }
 
 .button_styles {
-    font-family: $subFont;
+    font-family: $fontFamily;
     background: $primaryBtnColor;
     color: $primaryBtnText;
     font-size: 14px;
     font-weight: 700;
     padding: 12px 20px;
     display: inline-block;
+}
+
+.main_section {
+    max-width: 1280px;
+    margin: auto;
 }
